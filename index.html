@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Form</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f7;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 70px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: #28a745;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
+
+.total-section {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#discount-message, #form-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#discount-message.valid {
+  color: green;
+}
+
+#discount-message.invalid, #form-message.error {
+  color: red;
+}
+
+#form-message.success {
+  color: green;
+}
+
+</style>
+<body>
+  <div class="checkout-container">
+    <h1>🧾 Checkout Form</h1>
+
+    <form id="checkout-form">
+      <!-- Customer Information -->
+      <h2>Customer Details</h2>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="example@email.com">
+
+      <label for="address">Address:</label>
+      <textarea id="address" placeholder="Enter your address"></textarea>
+
+      <!-- Payment Details -->
+      <h2>Payment Details</h2>
+      <label for="card-number">Credit Card Number:</label>
+      <input type="text" id="card-number" maxlength="16" placeholder="Enter 16-digit card number">
+
+      <label for="expiry">Expiry Date (MM/YY):</label>
+      <input type="text" id="expiry" maxlength="5" placeholder="MM/YY">
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" maxlength="3" placeholder="3-digit CVV">
+
+      <!-- Discount Section -->
+      <h2>Discount Code</h2>
+      <input type="text" id="discount-code" placeholder="Enter discount code">
+      <button type="button" id="apply-discount">Apply Discount</button>
+      <p id="discount-message"></p>
+
+      <!-- Total Price -->
+      <div class="total-section">
+        <h3>Total Price: ₹<span id="total-price">2000</span></h3>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="checkout-btn">Complete Purchase</button>
+      <p id="form-message"></p>
+    </form>
+  </div>
+
+  <script src="./JS Evaluation 2.js"></script>
+</body>
+</html>
